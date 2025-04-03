@@ -51,6 +51,22 @@ const (
 	ASSIGN = "="
 	// PLUS represents the addition operator "+".
 	PLUS = "+"
+	// MINUS represents the subtraction operator "-".
+	MINUS = "-"
+	// BANG represents the logical NOT operator "!".
+	BANG = "!"
+	// ASTERISK represents the multiplication operator "*".
+	ASTERISK = "*"
+	// SLASH represents the division operator "/".
+	SLASH = "/"
+
+	// LT represents the less-than operator "<".
+	LT = "<"
+	// GT represents the greater-than operator ">".
+	GT = ">"
+
+	EQ     = "=="
+	NOT_EQ = "!="
 
 	// COMMA represents the delimiter ",".
 	COMMA = ","
@@ -68,12 +84,22 @@ const (
 	// FUNCTION represents the "fn" keyword.
 	FUNCTION = "FUNCTION"
 	// LET represents the "let" keyword.
-	LET = "LET"
+	LET    = "LET"
+	TRUE   = "TRUE"
+	FALSE  = "FALSE"
+	IF     = "IF"
+	ELSE   = "ELSE"
+	RETURN = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 // LookupIdentifier checks if an identifier is a keyword and returns its TokenType.
