@@ -34,11 +34,13 @@ func NewLexer(input string) *Lexer {
 		readPosition: 0,
 		charByte:     0,
 	}
+	// sets the pointers in the positions they should be at
 	lexer.readChar()
 
 	return lexer
 }
 
+// moves pointers through input string
 func (lexer *Lexer) readChar() {
 	// Have reached the end of the input?
 	if lexer.readPosition >= len(lexer.input) {

@@ -1,7 +1,36 @@
+// Package token provides the definitions and utilities for lexical tokens
+// used in the Monkey programming language. It defines token types, their
+// representations, and helper functions for token classification.
+//
+// Constants:
+// - ILLEGAL: Represents an unknown or invalid token.
+// - EOF: Represents the end of file token.
+// - IDENT: Represents an identifier (e.g., variable names like add, foobar, x, y).
+// - INT: Represents an integer literal.
+// - ASSIGN: Represents the assignment operator "=".
+// - PLUS: Represents the addition operator "+".
+// - COMMA: Represents the delimiter ",".
+// - SEMICOLON: Represents the delimiter ";".
+// - LPAREN: Represents the left parenthesis "(".
+// - RPAREN: Represents the right parenthesis ")".
+// - LBRACE: Represents the left brace "{".
+// - RBRACE: Represents the right brace "}".
+// - FUNCTION: Represents the "fn" keyword.
+// - LET: Represents the "let" keyword.
+//
+// Variables:
+// - keywords: A map of string keywords to their corresponding TokenType.
+//
+// Functions:
+//   - LookupIdentifier: Checks if a given identifier is a keyword and returns
+//     its corresponding TokenType. If the identifier is not a keyword, it
+//     defaults to returning IDENT.
 package token
 
+// TokenType is a string alias used to represent the type of a token.
 type TokenType string
 
+// Token is a struct that encapsulates the type and literal value of a token.
 type Token struct {
 	Type    TokenType
 	Literal string // storing this as a byte would be performant but debugging would be hard
