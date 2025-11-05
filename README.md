@@ -14,3 +14,8 @@ This repo, is based off the Thorsten Ball's book, Writing an Interpreter in Go. 
 ## Where can this knowledge be applied?
 
 I am thinking of writing a model checker and a parser for TLA+ (Leslie Lamport, FTW).
+
+## TODO
+
+- Support unicode character parsing
+- Support floats
